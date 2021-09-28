@@ -44,8 +44,8 @@ namespace NorthWindEntityLocalData.Data
         {
             if (!optionsBuilder.IsConfigured)
             {
-                //optionsBuilder.UseSqlServer(GetConnectionString());
-                LogQueryInfoToDebugOutputWindow(optionsBuilder);
+                optionsBuilder.UseSqlServer(GetConnectionString());
+                //LogQueryInfoToDebugOutputWindow(optionsBuilder);
             }
         }
 
@@ -54,7 +54,9 @@ namespace NorthWindEntityLocalData.Data
             var configuration = new ConfigurationBuilder()
                 .AddJsonFile("appsettings.json", optional: false)
                 .Build();
-
+            Debug.WriteLine("-------------------------");
+            Debug.WriteLine(configuration.GetConnectionString("DefaultConnection"));
+            Debug.WriteLine("-------------------------");
             return configuration.GetConnectionString("DefaultConnection");
         }
 

@@ -26,5 +26,11 @@ namespace NorthWindEntityLocalData.Classes
             using var context = new NorthContext();
             var _ = context.Customers.Count();
         }
+
+        public static async Task<bool> TestConnection()
+        {
+            await using var context = new NorthContext();
+            return await context.TestConnection();
+        }
     }
 }

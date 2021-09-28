@@ -9,12 +9,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Class projects", "Class pro
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Unit test projects", "Unit test projects", "{225424B2-4D34-4E1A-B9D5-255130D52A33}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthWindUnitTestProject", "NorthWindUnitTestProject\NorthWindUnitTestProject.csproj", "{3B7E0B8C-806B-4BAC-8A8D-CF9FB97055C5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NorthWindUnitTestProject", "NorthWindUnitTestProject\NorthWindUnitTestProject.csproj", "{3B7E0B8C-806B-4BAC-8A8D-CF9FB97055C5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F43D9B72-0FFF-4390-A05D-23CAEDDEF0CC}"
 	ProjectSection(SolutionItems) = preProject
-		NorthData\NorthWind2020Local.mdf = NorthData\NorthWind2020Local.mdf
-		NorthData\NorthWind2020Local_log.ldf = NorthData\NorthWind2020Local_log.ldf
+		NorthData\NorthWind2021.mdf = NorthData\NorthWind2021.mdf
+		NorthData\NorthWind2021_log.ldf = NorthData\NorthWind2021_log.ldf
 		readme.md = readme.md
 	EndProjectSection
 EndProject

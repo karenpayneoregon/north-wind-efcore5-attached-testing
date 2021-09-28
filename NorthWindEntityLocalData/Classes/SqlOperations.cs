@@ -45,7 +45,7 @@ namespace NorthWindEntityLocalData.Classes
             }, cancellationToken);
         }
 
-        public static string SelectStatement 
+        public static string SelectStatement
             => @"
 SELECT Cust.CustomerIdentifier, 
        Cust.CompanyName, 
@@ -70,5 +70,5 @@ FROM Customers AS Cust
 ";
     }
 
-    
+
 }

@@ -10,7 +10,8 @@ namespace NorthWindUnitTestProject.Base
         CustomerRead,
         ProductRead,
         Warming,
-        SqlClientRead
+        SqlClientRead,
+        Connecting
     }
     /// <summary>
     /// Declarative class for using Trait enum about for traits on test method.

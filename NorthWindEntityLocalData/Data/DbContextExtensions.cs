@@ -4,12 +4,30 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage;
 using System;
 using System.Data.Common;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace NorthWindEntityLocalData.Data
 {
     public static class DbContextExtensions
     {
+        /// <summary>
+        /// Determine if a connection can be made asynchronously
+        /// </summary>
+        /// <param name="context"><see cref="DbContext"/></param>
+        /// <returns></returns>
+        public static async Task<bool> TestConnection(this DbContext context) 
+            => await Task.Run(async () => await context.Database.CanConnectAsync());
+
+        /// <summary>
+        /// Determine if a connection can be made asynchronously with <see cref="CancellationToken"/>
+        /// </summary>
+        /// <param name="context"><see cref="DbContext"/></param>
+        /// <param name="token">&lt;see cref="CancellationToken"/&gt;</param>
+        /// <returns></returns>
+        public static async Task<bool> TestConnection(this DbContext context, CancellationToken token) 
+            => await Task.Run(async () => await context.Database.CanConnectAsync(token), token);
+
         public static async Task<T[]> SqlQuery<T>(this DbContext db, string sql, params object[] parameters) where T : class
         {
             using (var db2 = new ContextForQueryType<T>(db.Database.GetDbConnection(), db.Database.CurrentTransaction))

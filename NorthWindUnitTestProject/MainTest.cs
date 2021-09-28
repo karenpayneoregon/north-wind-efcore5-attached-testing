@@ -12,6 +12,13 @@ namespace NorthWindUnitTestProject
     public partial class MainTest : TestBase
     {
         [TestMethod]
+        [TestTraits(Trait.Connecting)]
+        public async Task A_ConnectTest()
+        {
+            Console.WriteLine(await CustomersOperations.TestConnection());
+        }
+
+        [TestMethod]
         [TestTraits(Trait.Warming)]
         public void A_Warmup()
         {
