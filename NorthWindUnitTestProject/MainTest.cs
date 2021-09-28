@@ -43,7 +43,7 @@ namespace NorthWindUnitTestProject
         [TestTraits(Trait.SqlClientRead)]
         public async Task SqlClientRead()
         {
-            CancellationTokenSource cancellationTokenSource = new CancellationTokenSource();
+            CancellationTokenSource cancellationTokenSource = new ();
 
             var (exception, _, dataTable) = await SqlOperations.ReadCustomersTask(cancellationTokenSource.Token);
             Assert.IsNull(exception);
