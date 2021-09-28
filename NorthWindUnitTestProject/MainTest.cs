@@ -1,4 +1,5 @@
 using System;
+using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NorthWindCoreLibrary.Classes;
@@ -33,5 +34,22 @@ namespace NorthWindUnitTestProject
             var results = await ProductsOperations.GetProductsWithProjectionAsync();
             Assert.AreEqual(results.Count, expected);
         }
+
+        /// <summary>
+        /// Conventional data provider read Customers
+        /// </summary>
+        /// <returns></returns>
+        [TestMethod]
+        [TestTraits(Trait.SqlClientRead)]
+        public async Task SqlClientRead()
+        {
+            CancellationTokenSource cancellationTokenSource = new CancellationTokenSource();
+
+            var (exception, _, dataTable) = await SqlOperations.ReadCustomersTask(cancellationTokenSource.Token);
+            Assert.IsNull(exception);
+            Assert.AreEqual(dataTable.Rows.Count,91);
+
+        }
+
     }
 }

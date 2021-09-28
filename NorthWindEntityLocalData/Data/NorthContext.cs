@@ -44,7 +44,8 @@ namespace NorthWindEntityLocalData.Data
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer(GetConnectionString());
+                //optionsBuilder.UseSqlServer(GetConnectionString());
+                LogQueryInfoToDebugOutputWindow(optionsBuilder);
             }
         }
 
