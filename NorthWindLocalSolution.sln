@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31624.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NorthWindEntityLocalData", "NorthWindEntityLocalData\NorthWindEntityLocalData.csproj", "{A56515B2-04B1-4FA4-99D9-9C3D9FC85529}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Class projects", "Class projects", "{113AE600-EFFB-4A22-96B0-46AFF63EF411}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Unit test projects", "Unit test projects", "{225424B2-4D34-4E1A-B9D5-255130D52A33}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthWindUnitTestProject", "NorthWindUnitTestProject\NorthWindUnitTestProject.csproj", "{3B7E0B8C-806B-4BAC-8A8D-CF9FB97055C5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F43D9B72-0FFF-4390-A05D-23CAEDDEF0CC}"
+	ProjectSection(SolutionItems) = preProject
+		NorthData\NorthWind2020Local.mdf = NorthData\NorthWind2020Local.mdf
+		NorthData\NorthWind2020Local_log.ldf = NorthData\NorthWind2020Local_log.ldf
+		readme.md = readme.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A56515B2-04B1-4FA4-99D9-9C3D9FC85529}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A56515B2-04B1-4FA4-99D9-9C3D9FC85529}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A56515B2-04B1-4FA4-99D9-9C3D9FC85529}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A56515B2-04B1-4FA4-99D9-9C3D9FC85529}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B7E0B8C-806B-4BAC-8A8D-CF9FB97055C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B7E0B8C-806B-4BAC-8A8D-CF9FB97055C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B7E0B8C-806B-4BAC-8A8D-CF9FB97055C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B7E0B8C-806B-4BAC-8A8D-CF9FB97055C5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A56515B2-04B1-4FA4-99D9-9C3D9FC85529} = {113AE600-EFFB-4A22-96B0-46AFF63EF411}
+		{3B7E0B8C-806B-4BAC-8A8D-CF9FB97055C5} = {225424B2-4D34-4E1A-B9D5-255130D52A33}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {40BC9202-25FA-4E21-B694-284FD90345C3}
+	EndGlobalSection
+EndGlobal
